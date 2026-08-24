@@ -18,28 +18,28 @@ namespace TencentCloud\Cngw\V20230418\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 查询过滤通用对象
+ * AI网关 Query Param 凭证物料配置
  *
- * @method string getName() 获取过滤参数名
- * @method void setName(string $Name) 设置过滤参数名
- * @method array getValues() 获取过滤参数值
- * @method void setValues(array $Values) 设置过滤参数值
+ * @method string getParamName() 获取<p>参数名</p>
+ * @method void setParamName(string $ParamName) 设置<p>参数名</p>
+ * @method string getParamValue() 获取<p>参数值</p>
+ * @method void setParamValue(string $ParamValue) 设置<p>参数值</p>
  */
-class Filter extends AbstractModel
+class AIGWQueryParamCredentialConfig extends AbstractModel
 {
     /**
-     * @var string 过滤参数名
+     * @var string <p>参数名</p>
      */
-    public $Name;
+    public $ParamName;
 
     /**
-     * @var array 过滤参数值
+     * @var string <p>参数值</p>
      */
-    public $Values;
+    public $ParamValue;
 
     /**
-     * @param string $Name 过滤参数名
-     * @param array $Values 过滤参数值
+     * @param string $ParamName <p>参数名</p>
+     * @param string $ParamValue <p>参数值</p>
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class Filter extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists("ParamName",$param) and $param["ParamName"] !== null) {
+            $this->ParamName = $param["ParamName"];
         }
 
-        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
-            $this->Values = $param["Values"];
+        if (array_key_exists("ParamValue",$param) and $param["ParamValue"] !== null) {
+            $this->ParamValue = $param["ParamValue"];
         }
     }
 }

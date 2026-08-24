@@ -18,28 +18,28 @@ namespace TencentCloud\Cngw\V20230418\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 查询过滤通用对象
+ * aksk类型密钥
  *
- * @method string getName() 获取过滤参数名
- * @method void setName(string $Name) 设置过滤参数名
- * @method array getValues() 获取过滤参数值
- * @method void setValues(array $Values) 设置过滤参数值
+ * @method string getAccessKeyId() 获取<p>AccessKeyId</p>
+ * @method void setAccessKeyId(string $AccessKeyId) 设置<p>AccessKeyId</p>
+ * @method string getSecretAccessKey() 获取<p>SecretAccessKey</p>
+ * @method void setSecretAccessKey(string $SecretAccessKey) 设置<p>SecretAccessKey</p>
  */
-class Filter extends AbstractModel
+class AIGWAKSKCredentialConfig extends AbstractModel
 {
     /**
-     * @var string 过滤参数名
+     * @var string <p>AccessKeyId</p>
      */
-    public $Name;
+    public $AccessKeyId;
 
     /**
-     * @var array 过滤参数值
+     * @var string <p>SecretAccessKey</p>
      */
-    public $Values;
+    public $SecretAccessKey;
 
     /**
-     * @param string $Name 过滤参数名
-     * @param array $Values 过滤参数值
+     * @param string $AccessKeyId <p>AccessKeyId</p>
+     * @param string $SecretAccessKey <p>SecretAccessKey</p>
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class Filter extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists("AccessKeyId",$param) and $param["AccessKeyId"] !== null) {
+            $this->AccessKeyId = $param["AccessKeyId"];
         }
 
-        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
-            $this->Values = $param["Values"];
+        if (array_key_exists("SecretAccessKey",$param) and $param["SecretAccessKey"] !== null) {
+            $this->SecretAccessKey = $param["SecretAccessKey"];
         }
     }
 }

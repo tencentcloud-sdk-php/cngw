@@ -18,28 +18,28 @@ namespace TencentCloud\Cngw\V20230418\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 查询过滤通用对象
+ * AI网关自定义 Header 凭证配置
  *
- * @method string getName() 获取过滤参数名
- * @method void setName(string $Name) 设置过滤参数名
- * @method array getValues() 获取过滤参数值
- * @method void setValues(array $Values) 设置过滤参数值
+ * @method string getHeaderName() 获取<p>Header名</p>
+ * @method void setHeaderName(string $HeaderName) 设置<p>Header名</p>
+ * @method string getHeaderValue() 获取<p>Header值</p>
+ * @method void setHeaderValue(string $HeaderValue) 设置<p>Header值</p>
  */
-class Filter extends AbstractModel
+class AIGWCustomHeaderCredentialConfig extends AbstractModel
 {
     /**
-     * @var string 过滤参数名
+     * @var string <p>Header名</p>
      */
-    public $Name;
+    public $HeaderName;
 
     /**
-     * @var array 过滤参数值
+     * @var string <p>Header值</p>
      */
-    public $Values;
+    public $HeaderValue;
 
     /**
-     * @param string $Name 过滤参数名
-     * @param array $Values 过滤参数值
+     * @param string $HeaderName <p>Header名</p>
+     * @param string $HeaderValue <p>Header值</p>
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class Filter extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists("HeaderName",$param) and $param["HeaderName"] !== null) {
+            $this->HeaderName = $param["HeaderName"];
         }
 
-        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
-            $this->Values = $param["Values"];
+        if (array_key_exists("HeaderValue",$param) and $param["HeaderValue"] !== null) {
+            $this->HeaderValue = $param["HeaderValue"];
         }
     }
 }

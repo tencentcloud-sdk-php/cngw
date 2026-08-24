@@ -18,28 +18,20 @@ namespace TencentCloud\Cngw\V20230418\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 查询过滤通用对象
+ * AI网关 Bearer Token 凭证配置
  *
- * @method string getName() 获取过滤参数名
- * @method void setName(string $Name) 设置过滤参数名
- * @method array getValues() 获取过滤参数值
- * @method void setValues(array $Values) 设置过滤参数值
+ * @method string getToken() 获取<p>Token凭证</p>
+ * @method void setToken(string $Token) 设置<p>Token凭证</p>
  */
-class Filter extends AbstractModel
+class AIGWBearerTokenCredentialConfig extends AbstractModel
 {
     /**
-     * @var string 过滤参数名
+     * @var string <p>Token凭证</p>
      */
-    public $Name;
+    public $Token;
 
     /**
-     * @var array 过滤参数值
-     */
-    public $Values;
-
-    /**
-     * @param string $Name 过滤参数名
-     * @param array $Values 过滤参数值
+     * @param string $Token <p>Token凭证</p>
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class Filter extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
-        }
-
-        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
-            $this->Values = $param["Values"];
+        if (array_key_exists("Token",$param) and $param["Token"] !== null) {
+            $this->Token = $param["Token"];
         }
     }
 }

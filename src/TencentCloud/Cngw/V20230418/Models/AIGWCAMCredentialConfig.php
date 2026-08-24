@@ -18,28 +18,28 @@ namespace TencentCloud\Cngw\V20230418\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 查询过滤通用对象
+ * CAM类型密钥
  *
- * @method string getName() 获取过滤参数名
- * @method void setName(string $Name) 设置过滤参数名
- * @method array getValues() 获取过滤参数值
- * @method void setValues(array $Values) 设置过滤参数值
+ * @method string getSecretId() 获取<p>SecretId</p>
+ * @method void setSecretId(string $SecretId) 设置<p>SecretId</p>
+ * @method string getSecretKey() 获取<p>SecretKey</p>
+ * @method void setSecretKey(string $SecretKey) 设置<p>SecretKey</p>
  */
-class Filter extends AbstractModel
+class AIGWCAMCredentialConfig extends AbstractModel
 {
     /**
-     * @var string 过滤参数名
+     * @var string <p>SecretId</p>
      */
-    public $Name;
+    public $SecretId;
 
     /**
-     * @var array 过滤参数值
+     * @var string <p>SecretKey</p>
      */
-    public $Values;
+    public $SecretKey;
 
     /**
-     * @param string $Name 过滤参数名
-     * @param array $Values 过滤参数值
+     * @param string $SecretId <p>SecretId</p>
+     * @param string $SecretKey <p>SecretKey</p>
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class Filter extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists("SecretId",$param) and $param["SecretId"] !== null) {
+            $this->SecretId = $param["SecretId"];
         }
 
-        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
-            $this->Values = $param["Values"];
+        if (array_key_exists("SecretKey",$param) and $param["SecretKey"] !== null) {
+            $this->SecretKey = $param["SecretKey"];
         }
     }
 }
